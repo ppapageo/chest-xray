@@ -11,6 +11,7 @@ do
 		echo "Running wget -c ${NAME} $URL --continue"
 		wget -O ${NAME} $URL --continue
 		tar -xvzf ${NAME} 
+		rm ${NAME}
 		it=$((${it}+1));
 	fi
 done < "$filename"
